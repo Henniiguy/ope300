@@ -1,0 +1,10 @@
+---
+
+- hosts: web
+  become: yes
+  tasks:
+    - name: Clone Ansible Git repository
+      git:
+        repo: https://github.com/ansible/ansible.git
+        dest: /opt/ansible
+
